@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--
+    1. ID resource elemen RecyclerView ini adalah 'recycler_view'
+    2. Atribut layout_width dan layout_height adalah match_parent sehingga RecyclerView dapat mengisi seluruh layar.
+    3. Aplikasi Affirmations menampilkan item sebagai daftar vertikal, sehingga perlu menggunakan 'app:layoutManager="LinearLayoutManager"'.
+    4. Agar dapat scroll daftar item yang lebih panjang dari layar secara vertikal, maka gunakan atribut android:scrollbars yang disetel ke 'vertical'.
+    -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
